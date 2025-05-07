@@ -5,27 +5,31 @@
 </head>
 
 <body>
-    <h2 class="naslov">
-        Artikli
-    </h2>
+    <h1>Artikli</h1>
     <hr>
 
     <table id="artikli">
-        <tr>
-            <th>
-                Jedinstven broj
-            </th>
-            <th>
-                Naziv
-            </th>
-            <th>
-                Cena
-            </th>
-            <th>
-                Dostupnost
-            </th>
-        </tr>
+        <thead>
+            <tr>
+                <th>Br</th>
+                <th>Naziv</th>
+                <th>Cena</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
     </table>
+    <div id="detalji"></div>
 
-    <script src="store-proizvodi-koji-nisu-na-stanju.js"></script>
+    <h2>Dodaj novi artikal</h2>
+    <form id="dodaj-atikal-forma">
+        <label for="naziv-artikla">Naziv:</label>
+        <input type="text" id="naziv-artikla" required>
+        <label for="cena-artikla">Cena:</label>
+        <input type="number" id="cena-artikla" required>
+        <label for="opis-artikla">Opis:</label>
+        <textarea id="opis-artikla" required></textarea>
+        <button type="submit">Dodaj artikal</button>
+    </form>
+
+    <script src=""></script>
 </body>
