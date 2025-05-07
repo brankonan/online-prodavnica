@@ -37,3 +37,21 @@ tr:hover {
     padding: 10px;
     border: 1px solid black;
 }
+
+form {
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    display: block;
+    block-size: 30px;
+    margin-bottom: 10px;
+    width: 20%;
+    padding: 8px;
+}
+
+h2 {
+    display: flex;
+    justify-content: flex-start;
+}

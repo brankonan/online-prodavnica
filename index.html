@@ -21,14 +21,14 @@
     <div id="detalji"></div>
 
     <h2>Dodaj novi artikal</h2>
-    <form id="dodaj-atikal-forma">
+    <form id="dodaj-artikal-forma">
         <label for="naziv-artikla">Naziv:</label>
-        <input type="text" id="naziv-artikla" required>
+        <input type="text" name="naziv" id="naziv-artikla" required>
         <label for="cena-artikla">Cena:</label>
-        <input type="number" id="cena-artikla" required>
+        <input type="number" name="cena" id="cena-artikla" required>
         <label for="opis-artikla">Opis:</label>
-        <textarea id="opis-artikla" required></textarea>
-        <button type="submit">Dodaj artikal</button>
+        <textarea id="opis-artikla" name="opis" required></textarea>
+        <button id="submit-button" type="button">Dodaj artikal</button>
     </form>
 
     <script src="funkcionalnost-za-admina.js"></script>
