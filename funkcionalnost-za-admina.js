@@ -8,21 +8,12 @@ class Artikal {
     }
 }
 
-// let artikli = [];
-
-// function inicijalizujApartmane() {
 const artikli = [
     new Artikal("Laptop", 800, "Laptop najnovije generacije sa najbrzim procesorom"),
     new Artikal("Telefon", 300, "Iphone 15 sa najlepsim korisnickim interfejsom"),
     new Artikal("Tablet", 400, "Ogroman ekran visoke rezulocije"),
     new Artikal("Kamera", 600, "Najlepsa zamena za ljudsko oko"),
 ];
-
-prikaziArtikle();
-// }
-
-// document.addEventListener('DOMContentLoaded', inicijalizujApartmane)
-
 
 function prikaziArtikle() {
     const tableBody = document.querySelector("#artikli tbody");
@@ -48,6 +39,26 @@ function prikaziArtikle() {
         opisCelija.textContent = artikal.opis;
         red.appendChild(opisCelija);
 
+        red.addEventListener("click", function () {
+            prikaziDetalje(artikal);
+        })
+
         tableBody.appendChild(red);
     }
 }
+
+function prikaziDetalje(artikal) {
+    const detaljiDiva = document.querySelector("#detalji");
+    detaljiDiva.innerHTML = "";
+
+    const paragraf = document.createElement("p");
+    paragraf.innerHTML = `
+        Naziv: ${artikal.naziv} <br>
+        Cena: ${artikal.cena}
+        Opis: ${artikal.opis}
+    `;
+
+    detaljiDiva.appendChild(paragraf);
+}
+
+prikaziArtikle();
